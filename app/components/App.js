@@ -6,7 +6,7 @@ import {
 export default class App extends Component {
     renderScene(route, navigator) {
         const Scene = route.scene
-        return <Scene />
+        return <Scene navigator={navigator}/>
     }
     render() {
         const { routes } = this.props
