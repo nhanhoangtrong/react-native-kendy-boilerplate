@@ -5,12 +5,12 @@ import {
   Text,
   View
 } from 'react-native';
-import AppContainer from './app/containers/AppContainer'
+import App from './app/components/App'
 
 export default class ReactNativeKendyBoilerplate extends Component {
   render() {
     return (
-      <AppContainer />
+      <App />
     );
   }
 }
