@@ -1,30 +1,27 @@
 import HomeScreen from './components/screens/HomeScreen'
 import TestScreen from './components/screens/TestScreen'
-import {
-    Navigator
-} from 'react-native'
 
-export default {
-    home: {
+export const AppRoutes = {
+    Home: {
         title: 'Home',
-        scene: HomeScreen,
-        config: Navigator.SceneConfigs.PushFromRight,
-        rightButton: {
-            title: 'Noti',
-            onPress(navigator) {
-                console.log('press noti button')
-            }
-        }
+        screen: HomeScreen,
+        // config: Navigator.screenConfigs.PushFromRight,
+        // rightButton: {
+        //     title: 'Noti',
+        //     onPress(navigator) {
+        //         console.log('press noti button')
+        //     }
+        // }
     },
-    test: {
+    Test: {
         title: 'Test',
-        scene: TestScreen,
-        config: Navigator.SceneConfigs.FloatFromBottom,
-        rightButton: {
-            title: 'Noti',
-            onPress(navigator) {
-                console.log('press noti button')
-            }
-        }
+        screen: TestScreen,
+        // config: Navigator.screenConfigs.FloatFromBottom,
+        // rightButton: {
+        //     title: 'Noti',
+        //     onPress(navigator) {
+        //         console.log('press noti button')
+        //     }
+        // }
     }
 }
