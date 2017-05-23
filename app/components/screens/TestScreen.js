@@ -7,14 +7,19 @@ import {
 
 export default class TestScreen extends Component {
     render() {
-        const { goBack } = this.props.navigation
+        const { dispatch } = this.props.navigation
         return (
             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
                 <Text>This is test screen</Text>
                 <Button
                     title="Back"
                     onPress={() => {
-                        goBack()
+                        dispatch({type: 'Back'})
+                    }} />
+                <Button
+                    title="Logout"
+                    onPress={() => {
+                        dispatch({type: 'Logout'})
                     }} />
             </View>
         )

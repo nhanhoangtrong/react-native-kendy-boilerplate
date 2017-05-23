@@ -1,5 +1,6 @@
 import HomeScreen from './components/screens/HomeScreen'
 import TestScreen from './components/screens/TestScreen'
+import LoginScreen from './components/screens/LoginScreen'
 
 export const AppRoutes = {
     Home: {
@@ -23,5 +24,9 @@ export const AppRoutes = {
         //         console.log('press noti button')
         //     }
         // }
+    },
+    Login: {
+        title: 'Login',
+        screen: LoginScreen,
     }
 }

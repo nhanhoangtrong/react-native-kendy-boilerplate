@@ -2,24 +2,14 @@ import { StyleSheet } from 'react-native'
 import colors from './constants'
 
 export default StyleSheet.create({
-    navBar: {
-        flex: 1,
-        backgroundColor: 'green',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    navBarTitle: {
-        padding: 8,
-        color: 'white',
-        fontWeight: '600',
-    },
-    navBarTextLeft: {
-        padding: 8,
-        color: 'white',
-    },
-    navBarTextRight: {
-        padding: 8,
-        color: 'white',
+    inputTextDefault: {
+        height: 32,
+        padding: 4,
+        margin: 4,
+        textAlign: 'center',
+        borderWidth: 1,
+        borderColor: 'gray',
+        borderRadius: 4,
+        backgroundColor: 'white',
     }
-
 })
