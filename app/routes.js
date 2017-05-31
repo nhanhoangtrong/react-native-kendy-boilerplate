@@ -4,28 +4,17 @@ import LoginScreen from './components/screens/LoginScreen'
 
 export const AppRoutes = {
     Home: {
+        key: 'Home',
         title: 'Home',
         screen: HomeScreen,
-        // config: Navigator.screenConfigs.PushFromRight,
-        // rightButton: {
-        //     title: 'Noti',
-        //     onPress(navigator) {
-        //         console.log('press noti button')
-        //     }
-        // }
     },
     Test: {
+        key: 'Test',
         title: 'Test',
         screen: TestScreen,
-        // config: Navigator.screenConfigs.FloatFromBottom,
-        // rightButton: {
-        //     title: 'Noti',
-        //     onPress(navigator) {
-        //         console.log('press noti button')
-        //     }
-        // }
     },
     Login: {
+        key: 'Login',
         title: 'Login',
         screen: LoginScreen,
     }

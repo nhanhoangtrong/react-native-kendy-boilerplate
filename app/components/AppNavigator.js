@@ -1,12 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { addNavigationHelpers, StackNavigator } from 'react-navigation'
+import { createNavigationContainer, createNavigator, addNavigationHelpers, StackNavigator, StackRouter } from 'react-navigation'
 import { AppRoutes } from '../routes'
 
-export const AppNavigator = StackNavigator({
+import DefaultTransitioner from './transitioners/DefaultTransitioner'
+
+// export const AppNavigator = StackNavigator({
+//     ...AppRoutes
+// })
+
+const router = StackRouter({
     ...AppRoutes
 })
+
+export const AppNavigator = createNavigationContainer(createNavigator(router)(DefaultTransitioner))
 
 const AppWithNavigationState = ({ dispatch, nav }) => (
   <AppNavigator navigation={addNavigationHelpers({ dispatch, state: nav })} />
