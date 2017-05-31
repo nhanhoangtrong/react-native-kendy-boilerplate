@@ -4,24 +4,31 @@ import {
     Text,
     Button,
 } from 'react-native'
+import { connect } from 'react-redux'
 
-export default class TestScreen extends Component {
+class TestScreen extends Component {
     render() {
-        const { pop } = this.props.navigator
+        const { navigator, username } = this.props
         return (
             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-                <Text>This is test screen</Text>
+                <Text>Hello { username }</Text>
                 <Button
                     title="Back"
                     onPress={() => {
-                        pop()
+                        navigator.pop()
                     }} />
                 <Button
                     title="Logout"
                     onPress={() => {
-                        pop()
+                        navigator.pop()
                     }} />
             </View>
         )
     }
 }
+
+const mapStateToProps = (state) => ({
+    username: state.auth.username,
+})
+
+export default connect(mapStateToProps)(TestScreen)

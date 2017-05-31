@@ -5,18 +5,17 @@ import {
     TextInput,
     Button,
 } from 'react-native'
-import styles from '../../styles'
+import styles from '../styles'
 
 export default class LoginScreen extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            username: '',
-            password: '',
+            username: (props.username || ''),
+            password: (props.password || ''),
         }
     }
     render() {
-        const { push } = this.props.navigator
         return (
             <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
                 <TextInput style={styles.inputTextDefault}
@@ -31,9 +30,15 @@ export default class LoginScreen extends Component {
                     secureTextEntry={true}
                     value={this.state.password} />
                 <Button title="Login or Register" onPress={() => {
-                        push({
-                            screen: 'main.HomeScreen',
-                            title: 'HomeScreen',
+
+                        // TODO: Verify login
+                        this.props.navigator.resetTo({
+                            screen: 'myapp.HomeScreen',
+                            title: 'Home Screen',
+                            passProps: {
+                                username: this.state.username,
+                                authToken: this.state.password,
+                            }
                         })
                     }} />
             </View>

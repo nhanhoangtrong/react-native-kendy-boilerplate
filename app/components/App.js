@@ -1,17 +1,21 @@
-import React, { Component } from 'react'
-import { Provider } from 'react-redux'
-import {
-    View,
-} from 'react-native'
-import AppWithNavigationState from '../components/AppNavigator'
-import store from '../store'
+import { Navigation } from 'react-native-navigation'
+import { registerScreens } from '../screens'
 
-export default class App extends Component {
-    render() {
-        return (
-            <Provider store={store}>
-                <AppWithNavigationState />
-            </Provider>
-        )
-    }
+export default function() {
+    // Registering screens before starting app
+    registerScreens()
+
+    Navigation.startSingleScreenApp({
+        screen: {
+            screen: 'myapp.LoginScreen',
+            title: 'Login Screen',
+            navigatorStyle: {},
+            navigatorButtons: {},
+        },
+        animationType: 'slide-down',
+        passProps: {
+            username: 'kendy',
+            password: 'aaa'
+        },
+    })
 }
