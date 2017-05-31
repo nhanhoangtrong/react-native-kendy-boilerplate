@@ -6,18 +6,19 @@ import {
 } from 'react-native'
 
 export default class HomeScreen extends Component {
-    static navigationOptions = {
-        title: 'Welcome'
-    }
     render() {
-        const { navigate } = this.props.navigation
+        const { push } = this.props.navigator
         return (
             <View style={{flex: 1, justifyContent: 'center'}}>
                 <Text>Hello World</Text>
                 <Button
                     title="Test Screen"
                     onPress={() => {
-                        navigate('Test')
+                        console.log('pushing')
+                        push({
+                            screen: 'main.TestScreen',
+                            title: 'TestScreen',
+                        })
                     }}/>
             </View>
         )

@@ -5,14 +5,9 @@ import {
     TextInput,
     Button,
 } from 'react-native'
-import { NavigationActions } from 'react-navigation'
 import styles from '../../styles'
 
 export default class LoginScreen extends Component {
-    static navigationOptions = {
-        title: 'LOGIN',
-        headerLeft: null,
-    }
     constructor(props) {
         super(props)
         this.state = {
@@ -21,7 +16,7 @@ export default class LoginScreen extends Component {
         }
     }
     render() {
-        const { dispatch } = this.props.navigation
+        const { push } = this.props.navigator
         return (
             <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
                 <TextInput style={styles.inputTextDefault}
@@ -36,8 +31,9 @@ export default class LoginScreen extends Component {
                     secureTextEntry={true}
                     value={this.state.password} />
                 <Button title="Login or Register" onPress={() => {
-                        dispatch({
-                            type: 'Login',
+                        push({
+                            screen: 'main.HomeScreen',
+                            title: 'HomeScreen',
                         })
                     }} />
             </View>

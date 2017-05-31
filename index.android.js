@@ -7,12 +7,28 @@ import {
 } from 'react-native';
 import App from './app/components/App'
 
-export default class ReactNativeKendyBoilerplate extends Component {
-  render() {
-    return (
-      <App />
-    );
-  }
-}
+import { Navigation } from 'react-native-navigation'
+import { registerScreens } from './app/components/screens'
 
-AppRegistry.registerComponent('ReactNativeKendyBoilerplate', () => ReactNativeKendyBoilerplate);
+registerScreens()
+
+Navigation.startSingleScreenApp({
+    screen: {
+        screen: 'main.HomeScreen',
+        title: 'Home Screen',
+        navigatorStyle: {},
+        navigatorButtons: {},
+    },
+    animationType: 'slide-down',
+    passProps: {},
+})
+
+// export default class ReactNativeKendyBoilerplate extends Component {
+//   render() {
+//     return (
+//       <App />
+//     );
+//   }
+// }
+//
+// AppRegistry.registerComponent('ReactNativeKendyBoilerplate', () => ReactNativeKendyBoilerplate);

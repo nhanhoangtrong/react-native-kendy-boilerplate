@@ -7,19 +7,19 @@ import {
 
 export default class TestScreen extends Component {
     render() {
-        const { dispatch } = this.props.navigation
+        const { pop } = this.props.navigator
         return (
             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
                 <Text>This is test screen</Text>
                 <Button
                     title="Back"
                     onPress={() => {
-                        dispatch({type: 'Back'})
+                        pop()
                     }} />
                 <Button
                     title="Logout"
                     onPress={() => {
-                        dispatch({type: 'Logout'})
+                        pop()
                     }} />
             </View>
         )
