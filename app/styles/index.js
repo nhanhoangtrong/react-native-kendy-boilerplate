@@ -1,8 +1,9 @@
-import { StyleSheet } from 'react-native'
-import colors from './constants'
+import { StyleSheet } from 'react-native';
+import colors from './constants';
 
 export default StyleSheet.create({
     inputTextDefault: {
+        alignSelf: 'stretch',
         height: 32,
         padding: 4,
         margin: 4,
@@ -11,5 +12,5 @@ export default StyleSheet.create({
         borderColor: 'gray',
         borderRadius: 4,
         backgroundColor: 'white',
-    }
-})
+    },
+});

@@ -1,9 +1,9 @@
-import { Navigation } from 'react-native-navigation'
-import { registerScreens } from '../screens'
+import { Navigation } from 'react-native-navigation';
+import { registerScreens } from '../screens';
 
 export default function() {
     // Registering screens before starting app
-    registerScreens()
+    registerScreens();
 
     Navigation.startSingleScreenApp({
         screen: {
@@ -15,7 +15,7 @@ export default function() {
         animationType: 'slide-down',
         passProps: {
             username: 'kendy',
-            password: 'aaa'
+            password: 'aaa',
         },
-    })
+    });
 }

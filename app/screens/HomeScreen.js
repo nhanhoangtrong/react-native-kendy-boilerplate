@@ -1,22 +1,18 @@
-import React, { Component } from 'react'
-import {
-    View,
-    Text,
-    Button,
-} from 'react-native'
+import React, { Component } from 'react';
+import { View, Text, Button } from 'react-native';
 
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
 class HomeScreen extends Component {
     constructor(props) {
-        super(props)
-        const { dispatch, username, authToken } = props
-        this.props.dispatch({type: 'Login', username, authToken})
+        super(props);
+        const { dispatch, username, authToken } = props;
+        this.props.dispatch({ type: 'Login', username, authToken });
     }
     render() {
-        const { navigator } = this.props
+        const { navigator } = this.props;
         return (
-            <View style={{flex: 1, justifyContent: 'center'}}>
+            <View style={{ flex: 1, justifyContent: 'center' }}>
                 <Text>Hello World</Text>
                 <Button
                     title="Test Screen"
@@ -29,19 +25,20 @@ class HomeScreen extends Component {
                             backButtonHidden: false,
                             navigatorStyle: {},
                             navigatorButtons: {},
-                        })
-                    }}/>
+                        });
+                    }}
+                />
             </View>
-        )
+        );
     }
 }
 
 const mapStateToProps = (state) => ({
-    state: state
-})
+    state: state,
+});
 
 const mapDispatchToProps = (dispatch) => ({
-    dispatch: dispatch
-})
+    dispatch: dispatch,
+});
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen)
+export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen);
