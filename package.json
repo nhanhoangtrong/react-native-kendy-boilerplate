@@ -11,7 +11,7 @@
     "react": "^16.3.2",
     "react-native": "^0.55.3",
     "react-native-navigation": "^1.1.81",
-    "react-redux": "^5.0.4",
+    "react-redux": "^5.1.2",
     "redux": "^4.0.0",
     "redux-logger": "^3.0.1",
     "redux-thunk": "^2.2.0"
