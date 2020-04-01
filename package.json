@@ -12,7 +12,7 @@
     "react-native": "^0.55.3",
     "react-native-navigation": "^1.1.81",
     "react-redux": "^5.0.4",
-    "redux": "^4.0.0",
+    "redux": "^4.0.5",
     "redux-logger": "^3.0.1",
     "redux-thunk": "^2.2.0"
   },
