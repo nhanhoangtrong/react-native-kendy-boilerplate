@@ -9,7 +9,7 @@
   "dependencies": {
     "global": "^4.3.2",
     "react": "^16.3.2",
-    "react-native": "^0.55.3",
+    "react-native": "^0.61.5",
     "react-native-navigation": "^1.1.81",
     "react-redux": "^5.0.4",
     "redux": "^4.0.0",
